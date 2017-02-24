@@ -8,28 +8,29 @@
 ## > mat <- matrix(c(1:4),c(2,2))
 ## > cacheMat <- makeCacheMatrix(mat)
 ## > cacheMat$get()
-## [,1] [,2]
-## [1,] 1 3
-## [2,] 2 4
+##      [,1] [,2]
+## [1,]   1    3
+## [2,]   2    4
 ## > cacheSolve(cacheMat)
-## [,1] [,2]
-## [1,] -2 1.5
-## [2,] 1 -0.5
+##      [,1] [,2]
+## [1,]  -2  1.5
+## [2,]  1   -0.5
 ## > cacheSolve(cacheMat)
 ## Retreiving the cached inverse matrix...
-## [,1] [,2]
-## [1,] -2 1.5
-## [2,] 1 -0.5
+##      [,1] [,2]
+## [1,]  -2  1.5
+## [2,]   1  -0.5
 ## Creates an object with the cache of a square matrix and creates
 ## a list of functions for interacting with the matrix.
 ##
-## - set Creates a cache of the matrix upon the call of
-## makeCacheMatrix and clears any previous cached
-## inverse matrix
-## - get Returns the cached matrix
-## - setinv Creates a cache of the solved inverse of the
-## orignal cached matrix created by set
-## - getinv Returns the cached inverse matrix
+## - set        Creates a cache of the matrix upon the call of
+##              makeCacheMatrix and clears any previous cached
+##              inverse matrix
+## - get        Returns the cached matrix
+## - setinv     Creates a cache of the solved inverse of the
+##              orignal cached matrix created by set
+## - getinv     Returns the cached inverse matrix
+
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         
